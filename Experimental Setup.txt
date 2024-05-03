@@ -1,0 +1,1 @@
+we relied on Visual Studio Code (VSCode) for coding, and Expo Go mobile app for instant testing on Android device and sometimes andorid studio emulator. Node/Express js is used as backend for server, while React Native is used as front end for our mobile app. We used MySQL as our database.
