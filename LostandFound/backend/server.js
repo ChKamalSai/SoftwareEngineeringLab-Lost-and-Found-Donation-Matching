@@ -8,23 +8,23 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Akhil2004@',
+    host: '',
+    user: '',
+    password: '',
     database: 'LostAndFound'
 }).then((connection) => {
     console.log('Connected to MySQL database for Lost and Found');
     
 const transporter = nodemailer.createTransport({
-  // Configure your SMTP settings here
+ 
   service: 'Gmail',
   auth: {
-    user: '21mcme10@uohyd.ac.in',
-    pass: 'busc buvf rgnl bgya'
+    user: '',
+    pass: ''
   }
 });
 
-// Route for sending emails
+
 app.post('/send-email', async (req, res) => {
   const { from, to, subject, text } = req.body;
 
@@ -44,7 +44,6 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-// Your other routes...
 
     app.post('/lostAndFound/items', async (req, res) => {
         const { itemName, itemDescription, location, email, type, itemPhoto } = req.body;
